@@ -3,9 +3,6 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Model\User;
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Input;
 
@@ -37,7 +34,7 @@ class LoginController extends CommonController
             }
             //一致则把用户信息存入session
             session(['user'=>$user]);
-            return redirect('admin/index');//跳转到首页
+            return redirect('admin');//跳转到首页
         }else{
             return view('admin.login');//没有数据 显示登陆界面
         }

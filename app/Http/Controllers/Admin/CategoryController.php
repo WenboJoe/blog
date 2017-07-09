@@ -105,7 +105,7 @@ class CategoryController extends CommonController
         }else{
 //            删除失败
             $data = [
-                'status' => 0,
+                'status' => 1,
                 'msg' => '分类删除失败,请稍后重试！',
             ];
         }
